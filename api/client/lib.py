@@ -165,7 +165,7 @@ def rank_series_by_source(access_token, api_host, series_list):
   prefered soruce comes first. Differences other than source_id are
   not affected.
   """
-  selections = set(tuple(filter(lambda (k, v): k != 'source_id',
+  selections = set(tuple(filter(lambda k, v: k != 'source_id',
                                 single_series.iteritems()))
                    for single_series in series_list)
   for series in map(dict, selections):
